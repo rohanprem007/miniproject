@@ -13,7 +13,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="header-nav">
