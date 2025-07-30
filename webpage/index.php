@@ -18,10 +18,10 @@
             <nav class="header-nav">
                 <a href="#" class="logo">TravelEase</a>
                 <div class="nav-links">
-                    <a href="#">Package</a>
-                    <a href="#">Booking</a>
-                    <a href="#">Payment</a>
-                    <a href="#">About Us</a>
+                    <a href="../pages/packages.php">Package</a>
+                    <a href="../pages/booking.php">Booking</a>
+                    <a href="../pages/payment.php">Payment</a>
+                    <a href="../pages/about.php">About Us</a>
                 </div>
                 <div class="nav-right">
                     <a href="#" class="signin-btn">Sign in</a>
@@ -110,4 +110,3 @@
 </body>
 </html>
 
-some random ass <code></code>
