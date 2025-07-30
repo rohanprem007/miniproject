@@ -24,7 +24,7 @@
                     <a href="../pages/about.php">About Us</a>
                 </div>
                 <div class="nav-right">
-                    <a href="#" class="signin-btn">Sign in</a>
+                    <a href="../user/login_page.php" class="signin-btn">Sign in</a>
                     <a href="#" class="signup-btn">Sign up</a>
                     <div class="menu-toggle">
                         <!-- A simple hamburger icon -->
