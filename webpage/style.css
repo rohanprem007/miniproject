@@ -187,6 +187,18 @@ body {
     animation: fadeInDown 1s ease-out forwards;
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .hero h1 {
     font-size: 56px;
     font-weight: 700;
@@ -227,18 +239,70 @@ body {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+/* --- UPDATED FEATURE CARD STYLES --- */
+
+/* This makes the <a> tag behave like a block and removes underline */
+.feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensures the link takes up the full card space */
 }
 
 .feature-card {
     background-color: #fff;
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures all cards have the same height */
+    border: 1px solid #e9ecef;
 }
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7f1ff;
+    color: #007bff;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card .icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.feature-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
 
 /* Footer */
 .footer {
