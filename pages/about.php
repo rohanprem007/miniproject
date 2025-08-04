@@ -34,8 +34,8 @@
                             </svg>
                         </button>
                         <div class="dropdown-menu" id="signInDropdown">
-                            <a href="../user/login page.php">User Login</a>
-                            <a href="#">Admin Login</a>
+                            <a href="../user/login_page.php">User Login</a>
+                            <a href="../admin/admin_login.php">Admin Login</a>
                         </div>
                     </div>
                     <a href="#" class="signup-btn">Sign up</a>

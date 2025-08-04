@@ -45,8 +45,8 @@ $conn->close();
                             </svg>
                         </button>
                         <div class="dropdown-menu" id="signInDropdown">
-                            <a href="../user/login page.php">User Login</a>
-                            <a href="#">Admin Login</a>
+                            <a href="../user/login_page.php">User Login</a>
+                            <a href="../admin/admin_login.php">Admin Login</a>
                         </div>
                     </div>
                     <a href="#" class="signup-btn">Sign up</a>
@@ -55,43 +55,7 @@ $conn->close();
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="page-main">
-        <!-- New Broad Features Section -->
-        <section class="broad-features">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Why Choose TravelEase?</h2>
-                    <p>We provide seamless and unforgettable travel experiences tailored just for you.</p>
-                </div>
-                <div class="broad-features-grid">
-                    <!-- Card 1 -->
-                    <div class="broad-card">
-                        <div class="card-background" style="background-image: url('https://placehold.co/600x400/3f51b5/ffffff?text=Expert+Guides');"></div>
-                        <div class="card-content">
-                            <h3>Expert Local Guides</h3>
-                            <p>Discover hidden gems with our knowledgeable and friendly local guides who bring each destination to life.</p>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="broad-card">
-                        <div class="card-background" style="background-image: url('https://placehold.co/600x400/e91e63/ffffff?text=Custom+Trips');"></div>
-                        <div class="card-content">
-                            <h3>Tailor-Made Itineraries</h3>
-                            <p>Your dream vacation, your way. We specialize in creating personalized trips that match your interests and budget.</p>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="broad-card">
-                        <div class="card-background" style="background-image: url('https://placehold.co/600x400/4caf50/ffffff?text=24/7+Support');"></div>
-                        <div class="card-content">
-                            <h3>24/7 Support</h3>
-                            <p>Travel with peace of mind knowing our dedicated support team is available around the clock to assist you.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
 
         <section class="page-content" id="packages-grid">
             <div class="container">
@@ -107,7 +71,7 @@ $conn->close();
                                     <span class="price">₹<?= number_format($package["price"]) ?></span>
                                     <span class="duration"><?= htmlspecialchars($package["duration"]) ?></span>
                                 </div>
-                                <a href="#" class="btn-book">Book Now</a>
+                                <a href="../pages/booking.php" class="btn-book">Book Now</a>
                             </div>
                         <?php endforeach; ?>
                     <?php else: ?>

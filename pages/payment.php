@@ -27,15 +27,15 @@
                 </div>
                 <div class="nav-right">
                     <div class="dropdown">
-                        <button class="signin-btn" id="sign InBtn">
+                        <button class="signin-btn" id="signInBtn">
                             Sign in
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 4px;">
                                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                             </svg>
                         </button>
                         <div class="dropdown-menu" id="signInDropdown">
-                            <a href="../user/login page.php">User Login</a>
-                            <a href="#">Admin Login</a>
+                            <a href="../user/login_page.php">User Login</a>
+                            <a href="../admin/admin_login.php">Admin Login</a>
                         </div>
                     </div>
                     <a href="#" class="signup-btn">Sign up</a>
