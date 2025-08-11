@@ -1,0 +1,157 @@
+/*
+ * Stylesheet for interior pages of TravelEase (Dark Theme)
+ */
+
+.page-main {
+    padding-top: 84px; /* Height of the fixed header */
+    background-color: #121212;
+    flex: 1;
+}
+
+.page-header {
+    background: linear-gradient(45deg, rgba(26, 32, 44, 0.9), rgba(45, 55, 72, 0.95)), url('https://placehold.co/1920x400/121212/e2e8f0?text=Explore') no-repeat center center;
+    background-size: cover;
+    padding: 80px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.page-content {
+    padding: 80px 0;
+}
+
+/* Package Grid Styles */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.package-item {
+    background-color: #2d3748; /* Dark card */
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #4a5568;
+}
+
+.package-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.package-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.package-item .destination {
+    color: #3b82f6; /* Accent color */
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.package-item p {
+    color: #a0aec0; /* Light gray text */
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.package-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-top: 1px solid #4a5568;
+    padding-top: 24px;
+}
+
+.package-details .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+.package-details .duration {
+    background-color: #1a202c;
+    color: #a0aec0;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-book {
+    display: inline-block;
+    text-align: center;
+    background: linear-gradient(45deg, #3b82f6, #2563eb);
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(59, 130, 246, 0.25);
+}
+
+/* About Us Content Styles */
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-container h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.content-container p, .content-container ul {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #a0aec0;
+    margin-bottom: 24px;
+}
+
+.content-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content-container ul li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.content-container ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: 700;
+}

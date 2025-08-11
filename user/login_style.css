@@ -1,0 +1,194 @@
+/*
+ * Stylesheet for the Animated User Login Page (Dark Theme)
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Added style for the new script font */
+.font-script {
+    font-family: 'Dancing Script', cursive;
+}
+
+.login-background {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.login-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.login-form-wrapper {
+    background: rgba(17, 24, 39, 0.7); /* Darker glass effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-header a {
+    font-size: 3.5rem; /* Adjusted size for the new font */
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.login-form-wrapper h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.login-form-wrapper p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.forgot-password {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.forgot-password:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #3b82f6;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.signup-link a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-form-wrapper {
+        padding: 30px 25px;
+    }
+    .login-form-wrapper h2 {
+        font-size: 22px;
+    }
+}

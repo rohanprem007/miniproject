@@ -1,0 +1,143 @@
+/*
+ * Stylesheet for the TravelEase Payment Page (Dark Theme)
+ */
+
+.payment-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    background-color: #2d3748; /* Dark card background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid #4a5568;
+}
+
+.payment-form .form-title,
+.order-summary .summary-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    color: #a0aec0;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a202c;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #e2e8f0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #718096;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.row .input-group {
+    flex: 1;
+}
+
+.btn-pay {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #3b82f6, #2563eb);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+.btn-pay:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Order Summary Styles */
+.order-summary {
+    background-color: #1a202c;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #4a5568;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: #a0aec0;
+}
+
+.summary-item span:last-child {
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.summary-item.total {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #4a5568;
+}
+
+.secure-badge {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #a0aec0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.secure-badge svg {
+    color: #38a169; /* Green for security */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .order-summary {
+        grid-row: 1; 
+    }
+}
