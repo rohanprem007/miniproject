@@ -155,3 +155,105 @@
     color: #3b82f6;
     font-weight: 700;
 }
+
+/* --- NEW: Booking Form Styles --- */
+.booking-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #2d3748;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #4a5568;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-form .form-row .form-group:first-child:last-child {
+    grid-column: 1 / -1; /* Make single-item rows span full width */
+}
+
+.booking-form .form-group label {
+    display: block;
+    font-weight: 500;
+    color: #a0aec0;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.booking-form .form-group input,
+.booking-form .form-group select {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a202c;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #e2e8f0;
+    box-sizing: border-box;
+}
+
+/* Style for the login prompt */
+.login-prompt {
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(26, 32, 44, 0.5);
+    border: 1px dashed #4a5568;
+    border-radius: 15px;
+}
+
+.login-prompt .prompt-icon {
+    font-size: 2rem;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.login-prompt h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.login-prompt p {
+    color: #a0aec0;
+    margin-bottom: 25px;
+}
+
+.login-prompt .prompt-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-prompt-login, .btn-prompt-signup {
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-prompt-login {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+.btn-prompt-login:hover {
+    background-color: #2563eb;
+}
+
+.btn-prompt-signup {
+    background-color: transparent;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+}
+.btn-prompt-signup:hover {
+    background-color: #4a5568;
+}

@@ -9,6 +9,18 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
+// Fetch CONFIRMED bookings that are ready for payment (i.e., not yet paid)
+$confirmed_sql = "SELECT b.bid, p.package_name, p.price
+                  FROM booking b
+                  JOIN package p ON b.package_id = p.package_id
+                  LEFT JOIN payment pay ON b.bid = pay.bid
+                  WHERE b.user_id = ? AND b.status = 'Confirmed' AND pay.pid IS NULL
+                  ORDER BY b.booking_date DESC";
+$stmt_confirmed = $conn->prepare($confirmed_sql);
+$stmt_confirmed->bind_param("i", $user_id);
+$stmt_confirmed->execute();
+$confirmed_result = $stmt_confirmed->get_result();
+
 // Fetch completed payment history
 $history_sql = "SELECT pay.pid, p.package_name, pay.amount, pay.payment_method, pay.payment_date, pay.status
                 FROM payment pay
@@ -39,6 +51,42 @@ $history_result = $stmt_history->get_result();
             <h1 class="page-title">My Payments</h1>
         </header>
         <main>
+            <!-- Section for Confirmed Bookings Awaiting Payment -->
+            <div class="content-section">
+                <h3>Confirmed Bookings to Pay</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Package Name</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if ($confirmed_result && $confirmed_result->num_rows > 0): ?>
+                                <?php while($row = $confirmed_result->fetch_assoc()): ?>
+                                    <tr>
+                                        <td><?php echo htmlspecialchars($row['bid']); ?></td>
+                                        <td><?php echo htmlspecialchars($row['package_name']); ?></td>
+                                        <td>₹<?php echo number_format($row['price'], 2); ?></td>
+                                        <td class="actions">
+                                            <a href="payment_page.php?booking_id=<?php echo $row['bid']; ?>" class="action-btn pay" title="Pay Now"><i class="fas fa-credit-card"></i></a>
+                                        </td>
+                                    </tr>
+                                <?php endwhile; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="4">No confirmed bookings are awaiting payment.</td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section for Payment History -->
             <div class="content-section">
                 <h3>Payment History</h3>
                 <div class="table-container">

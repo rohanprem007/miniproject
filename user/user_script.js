@@ -102,27 +102,41 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const formData = new FormData(this);
             formData.append('action', 'submit_payment');
-
-            // Simple validation
             if (!formData.get('cardholder_name') || !formData.get('card_number') || !formData.get('expiry_date') || !formData.get('cvc')) {
                 showToast('Please fill in all card details.', 'error');
                 return;
             }
-
             showConfirm('Confirm Payment', 'Are you sure you want to proceed with the payment?', () => {
-                fetch('user_operations.php', {
-                    method: 'POST',
-                    body: formData
-                })
+                fetch('user_operations.php', { method: 'POST', body: formData })
                 .then(response => response.json())
                 .then(data => {
                     showToast(data.message, data.status);
                     if (data.status === 'success') {
-                        setTimeout(() => {
-                            window.location.href = 'my_bookings.php';
-                        }, 2000);
+                        setTimeout(() => { window.location.href = 'my_bookings.php'; }, 2000);
                     }
                 });
+            });
+        });
+    }
+
+    // --- NEW: Feedback Form Submission Logic ---
+    const feedbackForm = document.getElementById('feedbackForm');
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            formData.append('action', 'submit_feedback');
+
+            fetch('user_operations.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                showToast(data.message, data.status);
+                if (data.status === 'success') {
+                    feedbackForm.reset();
+                }
             });
         });
     }

@@ -33,7 +33,6 @@ $conn->close();
                 <div class="nav-links">
                     <a href="packages.php">Package</a>
                     <a href="booking.php">Booking</a>
-                    <a href="payment.php">Payment</a>
                     <a href="about.php">About Us</a>
                 </div>
                 <div class="nav-right">
@@ -49,17 +48,23 @@ $conn->close();
                             <a href="../admin/admin_login.php">Admin Login</a>
                         </div>
                     </div>
-                    <a href="#" class="signup-btn">Sign up</a>
+                    <a href="../user/signup_page.php" class="signup-btn">Sign up</a>
                 </div>
             </nav>
         </div>
     </header>
 
-    
+    <main class="page-main">
+        <!-- New Banner Section -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Tour Packages</h1>
+                <p>Find the perfect trip from our collection of curated experiences.</p>
+            </div>
+        </section>
 
         <section class="page-content" id="packages-grid">
             <div class="container">
-                <h2 class="section-title">Our Top Packages</h2>
                 <div class="package-grid">
                     <?php if (!empty($packages)): ?>
                         <?php foreach ($packages as $package): ?>

@@ -16,7 +16,7 @@
     --border-color: #4a5568;
     --table-header-bg: #1f2937;
     --action-delete-bg: #ef4444;
-    --action-pay-bg: #10b981; /* Green for pay button */
+    --action-pay-bg: #10b981;
     --success-bg: #10b981;
     --error-bg: #ef4444;
     --toast-shadow: rgba(0, 0, 0, 0.2);
@@ -569,6 +569,39 @@ table th, table td {
     to { opacity: 0; }
 }
 
+/* --- NEW: Feedback Form Styles --- */
+.feedback-form .form-group {
+    margin-bottom: 1.5rem;
+}
+.feedback-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a202c;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.submit-btn {
+    background-color: var(--sidebar-active-bg);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 .mobile-menu-button {
     display: none;
     background: none;
@@ -583,6 +616,4 @@ table th, table td {
     .sidebar.active { transform: translateX(0); }
     .main-container { width: 100%; margin-left: 0; padding: 1rem; }
     .mobile-menu-button { display: block; }
-    .payment-container { grid-template-columns: 1fr; }
-    .order-summary { grid-row: 1; }
 }

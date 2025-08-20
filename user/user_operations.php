@@ -45,7 +45,6 @@ if ($action === 'book_package') {
     $stmt->close();
 }
 
-// --- NEW: Submit Payment Logic ---
 if ($action === 'submit_payment') {
     $booking_id = (int)$_POST['booking_id'];
     $amount = (float)$_POST['amount'];
@@ -53,8 +52,8 @@ if ($action === 'submit_payment') {
     $payment_date = date('Y-m-d H:i:s');
     $status = 'Completed';
 
-    // Verify the booking belongs to the user and is pending before processing payment
-    $verify_stmt = $conn->prepare("SELECT bid FROM booking WHERE bid = ? AND user_id = ? AND status = 'Pending'");
+    // Verify the booking belongs to the user and is CONFIRMED before processing payment
+    $verify_stmt = $conn->prepare("SELECT bid FROM booking WHERE bid = ? AND user_id = ? AND status = 'Confirmed'");
     $verify_stmt->bind_param("ii", $booking_id, $user_id);
     $verify_stmt->execute();
     $result = $verify_stmt->get_result();
@@ -65,19 +64,14 @@ if ($action === 'submit_payment') {
         $pay_stmt->bind_param("isdss", $booking_id, $payment_method, $amount, $payment_date, $status);
         
         if ($pay_stmt->execute()) {
-            // Update booking status to Confirmed
-            $update_stmt = $conn->prepare("UPDATE booking SET status = 'Confirmed' WHERE bid = ?");
-            $update_stmt->bind_param("i", $booking_id);
-            $update_stmt->execute();
-            $update_stmt->close();
-            
-            echo json_encode(['status' => 'success', 'message' => 'Payment successful! Your booking is confirmed.']);
+            // No longer need to update booking status here
+            echo json_encode(['status' => 'success', 'message' => 'Payment successful! Your booking is now fully paid.']);
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Payment failed. Please try again.']);
         }
         $pay_stmt->close();
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Invalid booking or booking already paid.']);
+        echo json_encode(['status' => 'error', 'message' => 'This booking is not confirmed or has already been paid.']);
     }
     $verify_stmt->close();
 }

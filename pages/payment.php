@@ -38,7 +38,8 @@
                             <a href="../admin/admin_login.php">Admin Login</a>
                         </div>
                     </div>
-                    <a href="#" class="signup-btn">Sign up</a>
+                    <!-- This link now correctly points to the signup page -->
+                    <a href="../user/signup_page.php" class="signup-btn">Sign up</a>
                 </div>
             </nav>
         </div>

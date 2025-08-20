@@ -14,6 +14,8 @@ $avatar_initial = strtoupper(substr($user_name, 0, 1));
         <li><a href="my_bookings.php" class="<?php echo ($current_page == 'my_bookings.php') ? 'active' : ''; ?>"><i class="fas fa-suitcase-rolling"></i> My Bookings</a></li>
         <li><a href="my_payments.php" class="<?php echo ($current_page == 'my_payments.php') ? 'active' : ''; ?>"><i class="fas fa-credit-card"></i> My Payments</a></li>
         <li><a href="my_profile.php" class="<?php echo ($current_page == 'my_profile.php') ? 'active' : ''; ?>"><i class="fas fa-user"></i> My Profile</a></li>
+        <!-- New link to the feedback page -->
+        <li><a href="user_feedback.php" class="<?php echo ($current_page == 'user_feedback.php') ? 'active' : ''; ?>"><i class="fas fa-comment-dots"></i> Feedback</a></li>
     </ul>
     <div class="sidebar-footer">
          <div class="user-profile">

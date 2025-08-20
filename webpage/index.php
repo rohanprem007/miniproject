@@ -20,7 +20,6 @@
                 <div class="nav-links">
                     <a href="../pages/packages.php">Package</a>
                     <a href="../pages/booking.php">Booking</a>
-                    <a href="../pages/payment.php">Payment</a>
                     <a href="../pages/about.php">About Us</a>
                 </div>
                 <div class="nav-right">
@@ -36,7 +35,7 @@
                             <a href="../admin/admin_login.php">Admin Login</a>
                         </div>
                     </div>
-                    <a href="#" class="signup-btn">Sign up</a>
+                    <a href="../user/signup_page.php" class="signup-btn">Sign up</a>
                 </div>
             </nav>
         </div>
@@ -64,42 +63,23 @@
         <section class="features" id="features">
             <div class="container">
                 <div class="features-grid">
-                    <!-- Feature Card 1: Packages -->
                     <a href="../pages/packages.php" class="feature-card-link">
                         <div class="feature-card">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
-                            </div>
+                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></div>
                             <h3>Packages</h3>
                             <p>Effortlessly plan and manage itineraries for diverse destinations.</p>
                         </div>
                     </a>
-                    <!-- Feature Card 2: Booking -->
                     <a href="../pages/booking.php" class="feature-card-link">
                         <div class="feature-card">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            </div>
+                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
                             <h3>Booking</h3>
                             <p>Maintain detailed customer profiles and communication history.</p>
                         </div>
                     </a>
-                    <!-- Feature Card 3: Payments -->
-                    <a href="../pages/payment.php" class="feature-card-link">
-                        <div class="feature-card">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                            </div>
-                            <h3>Payments</h3>
-                            <p>Handle bookings, secure payments, and track financial transactions.</p>
-                        </div>
-                    </a>
-                    <!-- Feature Card 4: About Us -->
                     <a href="../pages/about.php" class="feature-card-link">
                         <div class="feature-card">
-                            <div class="icon">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
-                            </div>
+                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg></div>
                             <h3>About Us</h3>
                             <p>Gain insights with comprehensive reports on your business performance.</p>
                         </div>
@@ -116,7 +96,6 @@
         </div>
     </footer>
 
-    <!-- External JavaScript File -->
     <script src="script.js"></script>
 
 </body>
